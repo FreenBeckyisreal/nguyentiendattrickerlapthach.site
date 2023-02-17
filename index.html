@@ -300,14 +300,75 @@
                   </div>
               </header>
                    <!--=============== tucodethem===============-->
-                   <div class="skills__content grid" data-content id="tucodethem">
-                       Tiểu Sử : Hello I'm Bui Quang Khai 2008 From Dong Nai Thank you for accompanying me in the past time :333.From Me With Love <3.
-                       
-              </div>
-             </div> 
-          </section>
-          
-      </main>
+                                               this.currentTrack = this.tracks[this.currentTrackIndex];
+                            this.resetPlayer();
+                          },
+                          resetPlayer() {
+                            this.barWidth = 0;
+                            this.circleLeft = 0;
+                            this.audio.currentTime = 0;
+                            this.audio.src = this.currentTrack.source;
+                            setTimeout(() => {
+                              if(this.isTimerPlaying) {
+                                this.audio.play();
+                              } else {
+                                this.audio.pause();
+                              }
+                            }, 300);
+                          },
+                          favorite() {
+                            this.tracks[this.currentTrackIndex].favorited = !this.tracks[
+                              this.currentTrackIndex
+                            ].favorited;
+                          }
+                        },
+                        created() {
+                          let vm = this;
+                          this.currentTrack = this.tracks[0];
+                          this.audio = new Audio();
+                          this.audio.src = this.currentTrack.source;
+                          this.audio.ontimeupdate = function() {
+                            vm.generateTime();
+                          };
+                          this.audio.onloadedmetadata = function() {
+                            vm.generateTime();
+                          };
+                          this.audio.onended = function() {
+                            vm.nextTrack();
+                            this.isTimerPlaying = true;
+                          };
+                          for (let index = 0; index < this.tracks.length; index++) {
+                            const element = this.tracks[index];
+                            let link = document.createElement('link');
+                            link.rel = "prefetch";
+                            link.href = element.cover;
+                            link.as = "image"
+                            document.head.appendChild(link)
+                          }
+                        }
+                      });
+                    </script>
+                    <audio id="autoplay" controls>
+                          <source src="assets/audio/vol2.mp3">
+                        </audio>
+                        
+                        <script>
+                            document.getElementById('autoplay').play();
+                        </script>
+                        
+                                            <audio id="autoplay" controls>
+                          <source src="assets/audio/vol3.mp3">
+                        </audio>
+                        
+                        <script>
+                            document.getElementById('autoplay').play();
+                        </script> 
+            </div>
+           </div> 
+        </section>
+        
+    </main>
+    
       
       <!--=============== FOOTER ===============-->
       <footer class="footer container">
