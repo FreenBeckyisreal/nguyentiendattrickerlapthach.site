@@ -4,7 +4,7 @@ const __DATA__ = {
         'favicon' : 'https://imgur.com/QORsVeD.jpg',
         'notice': 'NGUYỄN TIẾN ĐẠT 2008'
     },
-    'avatar-image' : 'https://i.imgur.com/HDyrDTe.jpg',
+    'avatar-image' : 'https://imgur.com/QORsVeD.jpg',
     'name' : 'Nguyễn Tiến Đạt', 
     'is_tick' : true,
     'skills' : [
