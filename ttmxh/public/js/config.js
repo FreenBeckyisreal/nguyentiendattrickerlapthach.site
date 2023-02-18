@@ -1,7 +1,7 @@
 const __DATA__ = {
     'config' : {
         'title' : 'NGUYỄN TIẾN ĐẠT',
-        'favicon' : 'https://i.imgur.com/HDyrDTe.jpg',
+        'favicon' : 'https://imgur.com/QORsVeD.jpg',
         'notice': 'NGUYỄN TIẾN ĐẠT 2008'
     },
     'avatar-image' : 'https://i.imgur.com/HDyrDTe.jpg',
@@ -13,7 +13,7 @@ const __DATA__ = {
     ],
     'bio-storys' : [
         {
-            'image' : 'https://i.imgur.com/HDyrDTe.jpg',
+            'image' : 'https://imgur.com/QORsVeD.jpg',
             'content' : 'LIÊN HỆ ADMIN',
             'author' : 'Nguyễn Tiến Đạt',
         },
